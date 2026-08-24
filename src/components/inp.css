@@ -1,0 +1,45 @@
+.form {
+    margin-right: 0.5rem;
+    font-family: Geneva;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+}
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 0 0 0 100px;
+}
+.form-check-label {
+    font-size: 1.2rem;
+    margin: 0px;
+    font-family: Geneva;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 16px;
+    color: white;
+    width:100%;
+}
+h3{
+    margin:0;
+    text-align: left;
+}
+#placeholder {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    width: 60%;
+    color: white;
+    /* padding: 0 100px; */
+    height: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

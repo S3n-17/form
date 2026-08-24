@@ -1,0 +1,14 @@
+#navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    height: 100px;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Tahoma;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 100px;
+}
