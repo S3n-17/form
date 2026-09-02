@@ -6,10 +6,11 @@ import './App.css'
 import Navbar from './components/navbar'
 import InpInputBox from './components/inp-input-box'
 import InpRadioButton from './components/inp-radio-button'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Technical from './components/technical'
 import ContentWriting from './components/content-writing'
 function Form() {
+  const navigate = useNavigate()
   return (
     <>
       <Navbar />
@@ -51,30 +52,19 @@ function Form() {
             'input[name="options"]:checked'
           )
 
-          if (selected) {
-            if (selected.value === "Technical") {
-              <Route path="/technical" element={<Technical />} />
-            }
-            else if (selected.value === "Content Writing") {
-              <Route path="/content-writing" element={<ContentWriting />} />
-            }
-            // else if (selected.value === "Graphic Designing") {
-            //   <Route path="/graphic-designing" element={<GraphicDesigning />} />
-            // }
-            // else if (selected.value === "Photography") {
-            //   <Route path="/photography" element={<Photography />} />
-            // }
-            // else if (selected.value === "Video Editing") {
-            //   <Route path="/video-editing" element={<VideoEditing />} />
-            // }
-            // else if (selected.value === "Public Relations and Management") {
-            //   <Route path="/public-relations-and-management" element={<PublicRelationsAndManagement />} />
-            // }
-          }
-          else {
+          if (!selected) {
             alert("Please select a domain to proceed")
+            return
           }
-        }}>Next</button>
+
+          if (selected.value === "Technical") {
+            navigate("/technical")
+          }
+          else if (selected.value === "Content Writing") {
+            navigate("/content-writing")
+          }
+        }}
+        >Next</button >
     </>
   )
 }
