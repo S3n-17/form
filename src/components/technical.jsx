@@ -3,7 +3,9 @@ import InpInputBox from './inp-input-box'
 import InpRadioButton from './inp-radio-button'
 import '../App.css'
 import Navbar from './navbar'
+import { Route, Router, useNavigate } from 'react-router-dom'
 const Technical = () => {
+    const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -27,7 +29,10 @@ const Technical = () => {
       <InpInputBox question="Live demo link" />
       <br></br>
       <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" />
-      <button className="next-button">Next</button>
+      <button className="previous-button" onClick={() => navigate("/")}>
+        Previous
+      </button>
+      <button className="submit-button">Submit</button>
     </div>
 
   )

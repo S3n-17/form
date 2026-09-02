@@ -9,6 +9,10 @@ import InpRadioButton from './components/inp-radio-button'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Technical from './components/technical'
 import ContentWriting from './components/content-writing'
+import GraphicDesigning from './components/graphic-designing'
+import Photography from './components/photography'
+import VideoEditing from './components/video-editing'
+import PublicRelations from './components/pr'
 function Form() {
   const navigate = useNavigate()
   return (
@@ -63,6 +67,18 @@ function Form() {
           else if (selected.value === "Content Writing") {
             navigate("/content-writing")
           }
+          else if (selected.value === "Graphic Designing") {
+            navigate("/graphic-designing")
+          }
+          else if (selected.value === "Photography") {
+            navigate("/photography")
+          }
+          else if (selected.value === "Video Editing") {
+            navigate("/video-editing")
+          }
+          else if (selected.value === "Public Relations and Management") {
+            navigate("/public-relations-and-management")
+          }
         }}
         >Next</button >
     </>
@@ -75,10 +91,10 @@ function App() {
       <Route path="/" element={<Form />} />
       <Route path="/technical" element={<Technical />} />
       <Route path="/content-writing" element={<ContentWriting />} />
-      {/* <Route path="/graphic-designing" element={<GraphicDesigning />} />
+      <Route path="/graphic-designing" element={<GraphicDesigning />} />
       <Route path="/photography" element={<Photography />} />
       <Route path="/video-editing" element={<VideoEditing />} />
-      <Route path="/public-relations-and-management" element={<PublicRelationsAndManagement />} />  */}
+      <Route path="/public-relations-and-management" element={<PublicRelations />} /> 
     </Routes>
   )
 
