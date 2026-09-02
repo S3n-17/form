@@ -53,23 +53,23 @@ function Form() {
 
           if (selected) {
             if (selected.value === "Technical") {
-              window.location.href = "/technical"
+              <Route path="/technical" element={<Technical />} />
             }
             else if (selected.value === "Content Writing") {
-              window.location.href = "/content-writing"
+              <Route path="/content-writing" element={<ContentWriting />} />
             }
-            else if (selected.value === "Graphic Designing") {
-              window.location.href = "/graphic-designing"
-            }
-            else if (selected.value === "Photography") {
-              window.location.href = "/photography"
-            }
-            else if (selected.value === "Video Editing") {
-              window.location.href = "/video-editing"
-            }
-            else if (selected.value === "Public Relations and Management") {
-              window.location.href = "/public-relations-and-management"
-            }
+            // else if (selected.value === "Graphic Designing") {
+            //   <Route path="/graphic-designing" element={<GraphicDesigning />} />
+            // }
+            // else if (selected.value === "Photography") {
+            //   <Route path="/photography" element={<Photography />} />
+            // }
+            // else if (selected.value === "Video Editing") {
+            //   <Route path="/video-editing" element={<VideoEditing />} />
+            // }
+            // else if (selected.value === "Public Relations and Management") {
+            //   <Route path="/public-relations-and-management" element={<PublicRelationsAndManagement />} />
+            // }
           }
           else {
             alert("Please select a domain to proceed")
