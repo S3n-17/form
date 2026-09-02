@@ -30,6 +30,15 @@ function Form() {
       <InpRadioButton option="CSE-DS" />
       <InpRadioButton option="CSE-CS" />
       <InpRadioButton option="IT" />
+      <InpRadioButton option="ECE" />
+      <InpRadioButton option="EE" />
+      <InpRadioButton option="ME" />
+      <InpRadioButton option="CE" />
+      <InpRadioButton option="CHE" />
+      <InpRadioButton option="BT" />
+      <InpRadioButton option="AEIE" />
+      <InpRadioButton option="AGE" />
+      <InpRadioButton option="FT" />
       <br></br>
       <InpInputBox question="Roll Number" />
       <br></br>
