@@ -7,7 +7,8 @@ import Navbar from './components/navbar'
 import InpInputBox from './components/inp-input-box'
 import InpRadioButton from './components/inp-radio-button'
 import { Routes, Route } from 'react-router-dom'
-
+import Technical from './components/technical'
+import ContentWriting from './components/content-writing'
 function Form() {
   return (
     <>
@@ -44,7 +45,36 @@ function Form() {
       <InpRadioButton option="Video Editing" />
       <InpRadioButton option="Public Relations and Management" />
       <br></br>
+      <button className="next-button"
+        onClick={() => {
+          const selected = document.querySelector(
+            'input[name="options"]:checked'
+          )
 
+          if (selected) {
+            if (selected.value === "Technical") {
+              window.location.href = "/technical"
+            }
+            else if (selected.value === "Content Writing") {
+              window.location.href = "/content-writing"
+            }
+            else if (selected.value === "Graphic Designing") {
+              window.location.href = "/graphic-designing"
+            }
+            else if (selected.value === "Photography") {
+              window.location.href = "/photography"
+            }
+            else if (selected.value === "Video Editing") {
+              window.location.href = "/video-editing"
+            }
+            else if (selected.value === "Public Relations and Management") {
+              window.location.href = "/public-relations-and-management"
+            }
+          }
+          else {
+            alert("Please select a domain to proceed")
+          }
+        }}>Next</button>
     </>
   )
 }
@@ -53,12 +83,12 @@ function App() {
     <Routes>
       {/* <Route path="*" element={<NotFound />} /> */}
       <Route path="/" element={<Form />} />
-      {/* <Route path="/technical" element={<Technical />} />
+      <Route path="/technical" element={<Technical />} />
       <Route path="/content-writing" element={<ContentWriting />} />
-      <Route path="/graphic-designing" element={<GraphicDesigning />} />
+      {/* <Route path="/graphic-designing" element={<GraphicDesigning />} />
       <Route path="/photography" element={<Photography />} />
       <Route path="/video-editing" element={<VideoEditing />} />
-      <Route path="/public-relations-and-management" element={<PublicRelationsAndManagement />} /> */}
+      <Route path="/public-relations-and-management" element={<PublicRelationsAndManagement />} />  */}
     </Routes>
   )
 
