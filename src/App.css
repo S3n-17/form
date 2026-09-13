@@ -314,3 +314,47 @@ body {
 
 }
 
+#other {
+    display: flex;
+    align-items: center;
+}
+
+#other input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 250px;
+    height: 25px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 10px;
+}
+
+#other input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 1024px) {
+
+    #other input[type="text"] {
+        width: 200px;
+        font-size: 15px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    #other {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    #other input[type="text"] {
+        width: 150px;
+        height: 25px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+}

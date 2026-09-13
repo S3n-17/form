@@ -6,6 +6,7 @@ import './App.css'
 import Navbar from './components/navbar'
 import InpInputBox from './components/inp-input-box'
 import InpRadioButton from './components/inp-radio-button'
+import { Checkbox } from './components/inp-radio-button'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Technical from './components/technical'
 import ContentWriting from './components/content-writing'
@@ -94,12 +95,12 @@ function Form() {
         <br></br>
         <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Domain you want to apply for</h3>
         <br></br>
-        <InpRadioButton option="Technical" name="domain" />
-        <InpRadioButton option="Content Writing" name="domain" />
-        <InpRadioButton option="Graphic Designing" name="domain" />
-        <InpRadioButton option="Photography" name="domain" />
-        <InpRadioButton option="Video Editing" name="domain" />
-        <InpRadioButton option="Public Relations and Management" name="domain" />
+        <Checkbox option="Technical" name="domain" />
+        <Checkbox option="Content Writing" name="domain" />
+        <Checkbox option="Graphic Designing" name="domain" />
+        <Checkbox option="Photography" name="domain" />
+        <Checkbox option="Video Editing" name="domain" />
+        <Checkbox option="Public Relations and Management" name="domain" />
         <br></br>
         <button type="submit" className="next-button">
           Next

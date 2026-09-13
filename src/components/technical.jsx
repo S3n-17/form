@@ -28,6 +28,10 @@ const Technical = () => {
         <InpRadioButton option="Web Development" name="domain" />
         <InpRadioButton option="Machine Learning" name="domain" />
         <InpRadioButton option="Cybersecurity" name="domain" />
+        <div id="other">
+          <InpRadioButton option="Other: " name="domain" />
+          <input type="text" placeholder="" />
+        </div>
         <br></br>
         <InpInputBox question="What made you interested in joining the technical team?" required />
         <br></br>
