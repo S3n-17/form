@@ -1,10 +1,10 @@
 import React from 'react'
 import './inp.css'
 
-const InpRadioButton = ({ option }) => {
+const InpRadioButton = ({ option, name, required }) => {
     return (
         <div className="radio-option">
-            <input type="radio" id={option}  name="options" value={option} />
+            <input type="radio" id={option}  name={name} value={option} required={required} />
             <label htmlFor={option} className="form-check-label">
                 {option}
             </label>

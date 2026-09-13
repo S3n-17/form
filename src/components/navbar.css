@@ -12,3 +12,31 @@
     justify-content: left;
     padding-left: 100px;
 }
+
+@media (max-width: 1024px) {
+
+    #navbar {
+        height: 80px;
+        font-size: 40px;
+        padding-left: 50px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    #navbar {
+        height: 65px;
+        font-size: 28px;
+        padding-left: 20px;
+    }
+
+}
+@media (max-width: 400px) {
+
+    #navbar {
+        height: 65px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+}

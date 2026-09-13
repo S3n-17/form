@@ -264,3 +264,53 @@ body {
     border: 2px solid black;
   }
 }
+
+@media (max-width: 1024px) {
+
+  .question-container {
+    padding-left: 50px;
+    padding-right: 30px;
+  }
+
+  #placeholder {
+    width: 80%;
+  }
+
+  .next-button,
+  .previous-button,
+  .submit-button {
+    margin-left: 50px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .question-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  #placeholder {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .next-button,
+  .previous-button,
+  .submit-button {
+    margin-left: 20px;
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  h3.q {
+    padding-left: 20px !important;
+    padding-right: 20px;
+    font-size: 18px;
+  }
+
+}
+
