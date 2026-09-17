@@ -1,10 +1,17 @@
 import React from 'react'
 import './inp.css'
 
-const InpRadioButton = ({ option, name, required }) => {
+const InpRadioButton = ({ option, name, required, checked, onChange }) => {
     return (
         <div className="radio-option">
-            <input type="radio" id={option}  name={name} value={option} required={required} />
+            <input 
+                type="radio"
+                id={option}
+                name={name}
+                value={option}
+                required={required}
+                checked={checked}
+                onChange={onChange} />
             <label htmlFor={option} className="form-check-label">
                 {option}
             </label>
@@ -15,7 +22,8 @@ const InpRadioButton = ({ option, name, required }) => {
 const Checkbox = ({ option, name, required }) => {
     return (
         <div className="radio-option">
-            <input type="checkbox" id={option}  name={name} value={option} required={required} />
+            <input 
+            type="checkbox" id={option}  name={name} value={option} required={required} checked={checked} onChange={onChange} />
             <label htmlFor={option} className="form-check-label">
                 {option}
             </label>
