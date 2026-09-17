@@ -14,6 +14,8 @@ import GraphicDesigning from './components/graphic-designing'
 import Photography from './components/photography'
 import VideoEditing from './components/video-editing'
 import PublicRelations from './components/pr'
+import Final from './components/final'
+import Submitted from './components/submitted'
 function Form() {
   const navigate = useNavigate()
   const [formData, setFormData] = useState(() => {
@@ -128,7 +130,6 @@ function Form() {
 function App() {
   return (
     <Routes>
-      {/* <Route path="*" element={<NotFound />} /> */}
       <Route path="/" element={<Form />} />
       <Route path="/technical" element={<Technical />} />
       <Route path="/content-writing" element={<ContentWriting />} />
@@ -136,6 +137,8 @@ function App() {
       <Route path="/photography" element={<Photography />} />
       <Route path="/video-editing" element={<VideoEditing />} />
       <Route path="/public-relations-and-management" element={<PublicRelations />} />
+      <Route path="/final" element={<Final />} />
+      <Route path="/submitted" element={<Submitted />} />
     </Routes>
   )
 
