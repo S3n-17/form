@@ -84,6 +84,8 @@ function Form() {
         <br></br>
         <InpInputBox question="Email" name="email" value={formData.email} onChange={handleChange} required />
         <br></br>
+        <InpInputBox question="Contact Number ( must have whatsapp)" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
+        <br></br>
         <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Branch</h3>
         <br></br>
         <InpRadioButton option="CSE" name="branch" checked={formData.branch === "CSE"} onChange={handleChange} /> 
