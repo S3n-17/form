@@ -1,5 +1,5 @@
 #navbar{
-    background-color: #333;
+    background-color: #161B22;
     color: white;
     padding: 10px;
     text-align: left;
@@ -39,4 +39,17 @@
         padding-left: 20px;
     }
 
+}
+
+#image {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+}
+@media (max-width: 600px) {
+    #image {
+        height: 55px;
+        width: 55px;
+        margin-right: 10px;
+    }
 }

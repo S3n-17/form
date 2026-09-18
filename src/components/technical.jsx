@@ -13,17 +13,17 @@ const Technical = () => {
     const { name, value } = e.target
 
     const updatedData = {
-        ...formData,
-        [name]: value
+      ...formData,
+      [name]: value
     }
 
     setFormData(updatedData)
 
     localStorage.setItem(
-        "formData",
-        JSON.stringify(updatedData)
+      "formData",
+      JSON.stringify(updatedData)
     )
-}
+  }
   return (
     <div>
       <Navbar />
@@ -32,7 +32,7 @@ const Technical = () => {
       <br></br>
       <form onSubmit={(e) => {
         e.preventDefault()
-      
+
         const subselected = document.querySelector(
           'input[name="subdomain"]:checked'
         )
@@ -85,8 +85,13 @@ const Technical = () => {
         <InpRadioButton option="Machine Learning" name="subdomain" checked={formData.subdomain === "Machine Learning"} onChange={handleChange} />
         <InpRadioButton option="Cybersecurity" name="subdomain" checked={formData.subdomain === "Cybersecurity"} onChange={handleChange} />
         <div id="other">
-          <InpRadioButton option="Other: " name="subdomain" checked={formData.subdomain === "Other"} onChange={handleChange} />
-          <input type="text" placeholder="" />
+          <InpRadioButton option="Other: " name="subdomain" checked={formData.subdomain === "Other: "} onChange={handleChange} />
+          <input
+            type="text"
+            placeholder=""
+            name="otherSubdomain"
+            value={formData.otherSubdomain || ""}
+            onChange={handleChange} />
         </div>
         <br></br>
         <InpInputBox question="What made you interested in joining the technical team?" name="whyJoinTechnical" value={formData.whyJoinTechnical} onChange={handleChange} required />
@@ -100,6 +105,7 @@ const Technical = () => {
         <InpInputBox question="Live demo link" name="liveDemoLink" value={formData.liveDemoLink} onChange={handleChange} required />
         <br></br>
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
+        <br></br>
         <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
         <br></br>
         <InpRadioButton option="Content Writing" name="techdomain" checked={formData.techdomain === "Content Writing"} onChange={handleChange} />
@@ -115,7 +121,7 @@ const Technical = () => {
         <button type="submit" className="next-button">
           Next
         </button>
-        
+
       </form>
     </div>
 
