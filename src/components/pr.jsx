@@ -51,24 +51,52 @@ const PublicRelations = () => {
 
         if (selected.value === "Technical") {
           navigate("/technical")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Content Writing") {
           navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Graphic Designing") {
           navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Photography") {
           navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Video Editing") {
           navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Public Relations and Management") {
           navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "None") {
           navigate("/final")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
       }}>
         <InpInputBox question="Why do you want to join the PR & Management team?" name="whyJoinPR" value={formData.whyJoinPR} onChange={handleChange} required />
@@ -82,8 +110,9 @@ const PublicRelations = () => {
         <InpInputBox question="Have you organized or managed any events before? If yes, tell us about your experience." name="eventOrganizationExperience" value={formData.eventOrganizationExperience} onChange={handleChange} required />
         <br></br>
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
         <br></br>
+        <div className="question-container">
         <InpRadioButton option="Content Writing" name="prdomain" checked={formData.prdomain === "Content Writing"} onChange={handleChange} />
         <InpRadioButton option="Technical" name="prdomain" checked={formData.prdomain === "Technical"} onChange={handleChange} />
         <InpRadioButton option="Graphic Designing" name="prdomain" checked={formData.prdomain === "Graphic Designing"} onChange={handleChange} />
@@ -91,10 +120,12 @@ const PublicRelations = () => {
         <InpRadioButton option="Photography" name="prdomain" checked={formData.prdomain === "Photography"} onChange={handleChange} />
         <InpRadioButton option="None" name="prdomain" checked={formData.prdomain === "None"} onChange={handleChange} />
         <br></br>
-        <button className="previous-button" onClick={() => navigate(-1)}>
+        </div>
+        <br></br>
+        <button className="button" onClick={() => navigate(-1)}>
           Previous
         </button>
-        <button type="submit" className="next-button">
+        <button type="submit" className="button">
           Next
         </button>
       </form>

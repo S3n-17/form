@@ -50,24 +50,52 @@ const ContentWriting = () => {
 
         if (selected.value === "Technical") {
           navigate("/technical")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Content Writing") {
           navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Graphic Designing") {
           navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Photography") {
           navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Video Editing") {
           navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Public Relations and Management") {
           navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "None") {
           navigate("/final")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
       }}>
 
@@ -82,7 +110,8 @@ const ContentWriting = () => {
         <InpInputBox question="Share a piece of writing you have written" name="writtenContent" value={formData.writtenContent} onChange={handleChange} required />
         <br></br>
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
+        <div className="question-container">
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
         <br></br>
         <InpRadioButton option="Technical" name="cwdomain" checked={formData.cwdomain === "Technical"} onChange={handleChange}/>
         <InpRadioButton option="Graphic Designing" name="cwdomain" checked={formData.cwdomain === "Graphic Designing"} onChange={handleChange}/>
@@ -91,10 +120,14 @@ const ContentWriting = () => {
         <InpRadioButton option="Public Relations and Management" name="cwdomain" checked={formData.cwdomain === "Public Relations and Management"} onChange={handleChange}/>
         <InpRadioButton option="None" name="cwdomain" checked={formData.cwdomain === "None"} onChange={handleChange} />
         <br></br>
-        <button type="submit" className="next-button">
+        </div>
+        <br></br>
+        <button type="submit" className="button">
           Next
         </button>
-        <button className="previous-button" onClick={() => navigate(-1)}>Previous</button>
+        <button className="button" onClick={() => navigate(-1)}>
+          Previous
+        </button>
 
       </form>
     </div>

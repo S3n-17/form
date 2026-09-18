@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import InpInputBox from './inp-input-box'
 import InpRadioButton from './inp-radio-button'
 import '../App.css'
@@ -13,17 +13,17 @@ const GraphicDesigning = () => {
     const { name, value } = e.target
 
     const updatedData = {
-        ...formData,
-        [name]: value
+      ...formData,
+      [name]: value
     }
 
     setFormData(updatedData)
 
     localStorage.setItem(
-        "formData",
-        JSON.stringify(updatedData)
+      "formData",
+      JSON.stringify(updatedData)
     )
-}
+  }
   return (
     <div>
       <Navbar />
@@ -44,24 +44,52 @@ const GraphicDesigning = () => {
 
         if (selected.value === "Technical") {
           navigate("/technical")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Content Writing") {
           navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Graphic Designing") {
           navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Photography") {
           navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Video Editing") {
           navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Public Relations and Management") {
           navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "None") {
           navigate("/final")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
       }}>
         <InpInputBox question="Why do you want to join the Graphic Designing team?" name="whyJoinGraphicDesigning" value={formData.whyJoinGraphicDesigning} onChange={handleChange} required />
@@ -73,8 +101,9 @@ const GraphicDesigning = () => {
         <InpInputBox question="Share the link for any work you have done in graphic design (minimum 3 samples)" name="graphicDesignWork" value={formData.graphicDesignWork} onChange={handleChange} required />
         <br></br>
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
         <br></br>
+        <div className="question-container">
         <InpRadioButton option="Content Writing" name="gddomain" checked={formData.gddomain === "Content Writing"} onChange={handleChange} />
         <InpRadioButton option="Technical" name="gddomain" checked={formData.gddomain === "Technical"} onChange={handleChange} />
         <InpRadioButton option="Photography" name="gddomain" checked={formData.gddomain === "Photography"} onChange={handleChange} />
@@ -82,10 +111,12 @@ const GraphicDesigning = () => {
         <InpRadioButton option="Public Relations and Management" name="gddomain" checked={formData.gddomain === "Public Relations and Management"} onChange={handleChange} />
         <InpRadioButton option="None" name="gddomain" checked={formData.gddomain === "None"} onChange={handleChange} />
         <br></br>
-        <button className="previous-button" onClick={() => navigate(-1)}>
+        </div>
+        <br></br>
+        <button className="button" onClick={() => navigate(-1)}>
           Previous
         </button>
-        <button type="submit" className="next-button">
+        <button type="submit" className="button">
           Next
         </button>
       </form>

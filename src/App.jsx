@@ -63,21 +63,45 @@ function Form() {
 
         if (selected.value === "Technical") {
           navigate("/technical")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Content Writing") {
           navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Graphic Designing") {
           navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Photography") {
           navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Video Editing") {
           navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Public Relations and Management") {
           navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
       }}>
         <InpInputBox question="Name " name="name" value={formData.name} onChange={handleChange} required />
@@ -86,9 +110,10 @@ function Form() {
         <br></br>
         <InpInputBox question="Contact Number ( must have whatsapp)" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
         <br></br>
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Branch</h3>
+        <div className="question-container">
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Branch</h3>
         <br></br>
-        <InpRadioButton option="CSE" name="branch" checked={formData.branch === "CSE"} onChange={handleChange} /> 
+        <InpRadioButton option="CSE" name="branch" checked={formData.branch === "CSE"} onChange={handleChange} />
         <InpRadioButton option="CSE-AIML" name="branch" checked={formData.branch === "CSE-AIML"} onChange={handleChange} />
         <InpRadioButton option="CSE-DS" name="branch" checked={formData.branch === "CSE-DS"} onChange={handleChange} />
         <InpRadioButton option="CSE-CS" name="branch" checked={formData.branch === "CSE-CS"} onChange={handleChange} />
@@ -102,6 +127,7 @@ function Form() {
         <InpRadioButton option="AEIE" name="branch" checked={formData.branch === "AEIE"} onChange={handleChange} />
         <InpRadioButton option="AGE" name="branch" checked={formData.branch === "AGE"} onChange={handleChange} />
         <InpRadioButton option="FT" name="branch" checked={formData.branch === "FT"} onChange={handleChange} />
+        </div>
         <br></br>
         <InpInputBox question="Roll Number" name="rollNumber" value={formData.rollNumber} onChange={handleChange} required />
         <br></br>
@@ -113,7 +139,8 @@ function Form() {
         <br></br>
         <InpInputBox question="What do you expect to learn from ISTE?" name="expectations" value={formData.expectations} onChange={handleChange} required />
         <br></br>
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Domain you want to apply for</h3>
+        <div className="question-container">
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Domain you want to apply for</h3>
         <br></br>
         <InpRadioButton option="Technical" name="maindomain" checked={formData.maindomain === "Technical"} onChange={handleChange} />
         <InpRadioButton option="Content Writing" name="maindomain" checked={formData.maindomain === "Content Writing"} onChange={handleChange} />
@@ -122,7 +149,9 @@ function Form() {
         <InpRadioButton option="Video Editing" name="maindomain" checked={formData.maindomain === "Video Editing"} onChange={handleChange} />
         <InpRadioButton option="Public Relations and Management" name="maindomain" checked={formData.maindomain === "Public Relations and Management"} onChange={handleChange} />
         <br></br>
-        <button type="submit" className="next-button">
+        </div>
+        <br></br>
+        <button type="submit" className="button">
           Next
         </button>
       </form>

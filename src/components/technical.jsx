@@ -52,24 +52,52 @@ const Technical = () => {
 
         if (selected.value === "Technical") {
           navigate("/technical")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Content Writing") {
           navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Graphic Designing") {
           navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Photography") {
           navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Video Editing") {
           navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "Public Relations and Management") {
           navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         else if (selected.value === "None") {
           navigate("/final")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         }
         // const domain = document.querySelector(
         //   'input[name="domain"]:checked'
@@ -79,7 +107,8 @@ const Technical = () => {
         //   return
         // }
       }}>
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Which domain are you most comfortable with?</h3>
+        <div className="question-container">
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Which domain are you most comfortable with?</h3>
         <br></br>
         <InpRadioButton option="Web Development" name="subdomain" checked={formData.subdomain === "Web Development"} onChange={handleChange} />
         <InpRadioButton option="Machine Learning" name="subdomain" checked={formData.subdomain === "Machine Learning"} onChange={handleChange} />
@@ -94,6 +123,8 @@ const Technical = () => {
             onChange={handleChange} />
         </div>
         <br></br>
+        </div>
+        <br></br>
         <InpInputBox question="What made you interested in joining the technical team?" name="whyJoinTechnical" value={formData.whyJoinTechnical} onChange={handleChange} required />
         <br></br>
         <InpInputBox question="Which programming languages are you comfortable with?" name="programminglang" value={formData.programminglang} onChange={handleChange} required />
@@ -106,7 +137,8 @@ const Technical = () => {
         <br></br>
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
         <br></br>
-        <h3 className="q" style={{ padding: "0 0 0 100px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
+        <div className="question-container">
+        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
         <br></br>
         <InpRadioButton option="Content Writing" name="techdomain" checked={formData.techdomain === "Content Writing"} onChange={handleChange} />
         <InpRadioButton option="Graphic Designing" name="techdomain" checked={formData.techdomain === "Graphic Designing"} onChange={handleChange} />
@@ -115,10 +147,12 @@ const Technical = () => {
         <InpRadioButton option="Public Relations and Management" name="techdomain" checked={formData.techdomain === "Public Relations and Management"} onChange={handleChange} />
         <InpRadioButton option="None" name="techdomain" checked={formData.techdomain === "None"} onChange={handleChange} />
         <br></br>
-        <button className="previous-button" onClick={() => navigate(-1)}>
+        </div>
+        <br></br>
+        <button className="button" onClick={() => navigate(-1)}>
           Previous
         </button>
-        <button type="submit" className="next-button">
+        <button type="submit" className="button">
           Next
         </button>
 
