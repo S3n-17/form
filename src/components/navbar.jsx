@@ -3,11 +3,11 @@ import './navbar.css'
 import isteLogo from '../assets/istelogo.png'
 const Navbar = () => {
   return (
-    <div id="navbar">
-      <img id="image" src={isteLogo} alt="ISTE Logo"></img>
-      ISTE Recruitment Form
-    </div>
-  )
+    <nav id="navbar">
+      <img id="image" src={isteLogo} alt="Logo" />
+      <span className="nav-title">ISTE Recruitment Form</span>
+    </nav>
+  );
 }
 
 export default Navbar

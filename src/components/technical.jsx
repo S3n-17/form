@@ -28,7 +28,9 @@ const Technical = () => {
     <div>
       <Navbar />
       <br></br>
-      <h2 style={{ color: "white", fontWeight: "500" }}>Technical Team</h2>
+      <div className="section-heading-container">
+        <h2 className="section-heading">Technical</h2>
+      </div>
       <br></br>
       <form onSubmit={(e) => {
         e.preventDefault()
@@ -108,21 +110,40 @@ const Technical = () => {
         // }
       }}>
         <div className="question-container">
-        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Which domain are you most comfortable with?</h3>
-        <br></br>
-        <InpRadioButton option="Web Development" name="subdomain" checked={formData.subdomain === "Web Development"} onChange={handleChange} />
-        <InpRadioButton option="Machine Learning" name="subdomain" checked={formData.subdomain === "Machine Learning"} onChange={handleChange} />
-        <InpRadioButton option="Cybersecurity" name="subdomain" checked={formData.subdomain === "Cybersecurity"} onChange={handleChange} />
-        <div id="other">
-          <InpRadioButton option="Other: " name="subdomain" checked={formData.subdomain === "Other: "} onChange={handleChange} />
-          <input
-            type="text"
-            placeholder=""
-            name="otherSubdomain"
-            value={formData.otherSubdomain || ""}
-            onChange={handleChange} />
-        </div>
-        <br></br>
+          <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Which domain are you most comfortable with?</h3>
+          <br></br>
+          <InpRadioButton option="Web Development" name="subdomain" checked={formData.subdomain === "Web Development"} onChange={handleChange} />
+          <InpRadioButton option="Machine Learning" name="subdomain" checked={formData.subdomain === "Machine Learning"} onChange={handleChange} />
+          <InpRadioButton option="Cybersecurity" name="subdomain" checked={formData.subdomain === "Cybersecurity"} onChange={handleChange} />
+          {/* OTHER OPTION CARD WITH INLINE TEXT INPUT */}
+          {/* SINGLE CLEAN CARD FOR OTHER */}
+          <div className="radio-option other-option-card">
+            <label className="radio-label">
+              <input
+                type="radio"
+                name="subdomain"
+                value="Other:"
+                checked={formData.subdomain === "Other:"}
+                onChange={handleChange}
+              />
+              <span>Other:</span>
+            </label>
+
+            <input
+              type="text"
+              className="inline-other-input"
+              placeholder="Write here"
+              name="otherSubdomain"
+              value={formData.otherSubdomain || ""}
+              onChange={(e) => {
+                handleChange(e);
+                if (formData.subdomain !== "Other:") {
+                  handleChange({ target: { name: "subdomain", value: "Other:" } });
+                }
+              }}
+            />
+          </div>
+          <br></br>
         </div>
         <br></br>
         <InpInputBox question="What made you interested in joining the technical team?" name="whyJoinTechnical" value={formData.whyJoinTechnical} onChange={handleChange} required />
@@ -138,15 +159,15 @@ const Technical = () => {
         <InpInputBox question="What are you hoping to learn or gain from being a part of the society?" name="learnings" value={formData.learnings} onChange={handleChange} required />
         <br></br>
         <div className="question-container">
-        <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
-        <br></br>
-        <InpRadioButton option="Content Writing" name="techdomain" checked={formData.techdomain === "Content Writing"} onChange={handleChange} />
-        <InpRadioButton option="Graphic Designing" name="techdomain" checked={formData.techdomain === "Graphic Designing"} onChange={handleChange} />
-        <InpRadioButton option="Photography" name="techdomain" checked={formData.techdomain === "Photography"} onChange={handleChange} />
-        <InpRadioButton option="Video Editing" name="techdomain" checked={formData.techdomain === "Video Editing"} onChange={handleChange} />
-        <InpRadioButton option="Public Relations and Management" name="techdomain" checked={formData.techdomain === "Public Relations and Management"} onChange={handleChange} />
-        <InpRadioButton option="None" name="techdomain" checked={formData.techdomain === "None"} onChange={handleChange} />
-        <br></br>
+          <h3 className="q" style={{ padding: "0 0 0 0px", color: "white", fontWeight: "500" }}>Any other domain you want to apply for</h3>
+          <br></br>
+          <InpRadioButton option="Content Writing" name="techdomain" checked={formData.techdomain === "Content Writing"} onChange={handleChange} />
+          <InpRadioButton option="Graphic Designing" name="techdomain" checked={formData.techdomain === "Graphic Designing"} onChange={handleChange} />
+          <InpRadioButton option="Photography" name="techdomain" checked={formData.techdomain === "Photography"} onChange={handleChange} />
+          <InpRadioButton option="Video Editing" name="techdomain" checked={formData.techdomain === "Video Editing"} onChange={handleChange} />
+          <InpRadioButton option="Public Relations and Management" name="techdomain" checked={formData.techdomain === "Public Relations and Management"} onChange={handleChange} />
+          <InpRadioButton option="None" name="techdomain" checked={formData.techdomain === "None"} onChange={handleChange} />
+          <br></br>
         </div>
         <br></br>
         <button className="button" onClick={() => navigate(-1)}>

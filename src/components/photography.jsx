@@ -28,7 +28,9 @@ const Photography = () => {
     <div>
       <Navbar />
       <br></br>
-      <h2 style={{ color: "white", fontWeight: "500" }}>Photography</h2>
+      <div className="section-heading-container">
+        <h2 className="section-heading">Photography</h2>
+      </div>
       <br></br>
       <form onSubmit={(e) => {
         e.preventDefault()

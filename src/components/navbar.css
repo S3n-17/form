@@ -1,56 +1,124 @@
-#navbar{
-    background-color: #161B22;
-    color: white;
-    padding: 10px;
-    text-align: left;
-    height: 100px;
-    font-size: 50px;
-    font-weight: 600;
-    font-family: Tahoma;
-    text-shadow: 0px 2.7px 5px rgba(254, 253, 253, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding-left: 100px;
+#navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 108px;
+  padding: 0 56px;
+
+  display: flex;
+  align-items: center;
+
+  /* Semi-transparent Deep Navy allows background watermark to flow under seamlessly */
+  background: rgba(1, 7, 54, 0.55) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  z-index: 1000;
+
+  /* Prominent Gold Bottom Accent Border */
+  border-bottom: 2px solid #FCF1D0;
+  box-shadow: 0 8px 30px rgba(1, 7, 54, 0.85), 0 2px 12px rgba(252, 241, 208, 0.2);
+
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 1024px) {
-
-    #navbar {
-        height: 80px;
-        font-size: 40px;
-        padding-left: 50px;
-    }
-
-}
-@media (max-width: 600px) {
-
-    #navbar {
-        height: 65px;
-        font-size: 28px;
-        padding-left: 20px;
-    }
-
-}
-@media (max-width: 400px) {
-
-    #navbar {
-        height: 65px;
-        font-size: 20px;
-        padding-left: 20px;
-    }
-
+/* Glassmorphism inner sheen */
+#navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(252, 241, 208, 0.08) 0%, transparent 100%);
+  pointer-events: none;
 }
 
+/* SCALED UP LOGO CONTAINER */
 #image {
-    height: 80px;
-    width: 80px;
-    margin-right: 20px;
+  width: 56px;
+  height: 56px;
+  margin-right: 22px;
+  object-fit: contain;
+  border-radius: 14px;
+  padding: 7px;
+
+  /* Semi-transparent Navy card fill */
+  background: rgba(13, 28, 66, 0.85);
+  border: 2px solid #FCF1D0;
+  box-shadow: 0 0 16px rgba(252, 241, 208, 0.35);
+
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Hover rotation & lift on Logo */
+#navbar:hover #image {
+  transform: rotate(-3deg) scale(1.06);
+  box-shadow: 0 0 24px rgba(252, 241, 208, 0.55);
+  border-color: #ffffff;
+}
+
+/* NAVIGATION TITLE */
+.nav-title {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+
+  /* Explicit Gold Text Color with ambient glow */
+  color: #FCF1D0 !important;
+  text-shadow: 0 0 18px rgba(252, 241, 208, 0.45), 0 2px 5px rgba(0, 0, 0, 0.8);
+
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Gold Underline Accent on Hover */
+.nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #FCF1D0;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #FCF1D0;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#navbar:hover .nav-title::after {
+  width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  #navbar {
+    height: 90px;
+    padding: 0 36px;
+  }
+  .nav-title {
+    font-size: 24px;
+  }
+  #image {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 @media (max-width: 600px) {
-    #image {
-        height: 55px;
-        width: 55px;
-        margin-right: 10px;
-    }
+  #navbar {
+    height: 78px;
+    padding: 0 20px;
+  }
+  .nav-title {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
+  #image {
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    padding: 5px;
+  }
 }

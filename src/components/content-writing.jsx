@@ -99,7 +99,9 @@ const ContentWriting = () => {
         }
       }}>
 
-        <h2 style={{ color: "white", fontWeight: "500" }}>Content Writing</h2>
+        <div className="section-heading-container">
+        <h2 className="section-heading">Content Writing</h2>
+      </div>
         <br></br>
         <InpInputBox question="Why do you want to join the Content Writing team?" name="whyJoinContentWriting" value={formData.whyJoinContentWriting} onChange={handleChange} required />
         <br></br>
