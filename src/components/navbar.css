@@ -9,7 +9,7 @@
   align-items: center;
 
   /* Semi-transparent Deep Navy allows background watermark to flow under seamlessly */
-  background: rgba(1, 7, 54, 0.55) !important;
+  background: rgba(1, 7, 54, 0.9) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
