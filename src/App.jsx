@@ -15,6 +15,7 @@ import Submitted from './components/submitted'
 
 function Form() {
   const navigate = useNavigate()
+  localStorage.setItem("domainArray", JSON.stringify([]))
   const [formData, setFormData] = useState(() => {
     return JSON.parse(localStorage.getItem("formData")) || {}
   })
@@ -64,19 +65,75 @@ function Form() {
       alert("Please enter a valid roll number in the format XX/XXX/XXX")
       return
     }
-    const routes = {
-      "Technical": "/technical",
-      "Content Writing": "/content-writing",
-      "Graphic Designing": "/graphic-designing",
-      "Photography": "/photography",
-      "Video Editing": "/video-editing",
-      "Public Relations and Management": "/public-relations-and-management"
-    }
+    // const routes = {
+    //   "Technical": "/technical",
+    //   "Content Writing": "/content-writing",
+    //   "Graphic Designing": "/graphic-designing",
+    //   "Photography": "/photography",
+    //   "Video Editing": "/video-editing",
+    //   "Public Relations and Management": "/public-relations-and-management"
+    // }
 
-    if (routes[selected.value]) {
-      navigate(routes[selected.value])
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
+    // if (routes[selected.value]) {
+    //   navigate(routes[selected.value])
+    //   window.scrollTo({ top: 0, behavior: 'smooth' })
+    // }
+    if (selected.value === "Technical") {
+      localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Technical"])) : localStorage.setItem("domainArray", JSON.stringify(["Technical"]));
+      navigate("/technical")
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+        }
+        else if (selected.value === "Content Writing") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Content Writing"])) : localStorage.setItem("domainArray", JSON.stringify(["Content Writing"]));
+          navigate("/content-writing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        else if (selected.value === "Graphic Designing") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Graphic Designing"])) : localStorage.setItem("domainArray", JSON.stringify(["Graphic Designing"]));
+          navigate("/graphic-designing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        else if (selected.value === "Photography") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Photography"])) : localStorage.setItem("domainArray", JSON.stringify(["Photography"]));
+          navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        else if (selected.value === "Video Editing") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Video Editing"])) : localStorage.setItem("domainArray", JSON.stringify(["Video Editing"]));
+          navigate("/video-editing")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        else if (selected.value === "Photography") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Photography"])) : localStorage.setItem("domainArray", JSON.stringify(["Photography"]));
+          navigate("/photography")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+        else if (selected.value === "Public Relations and Management") {
+          localStorage.getItem("domainArray") ? localStorage.setItem("domainArray", JSON.stringify([...JSON.parse(localStorage.getItem("domainArray")), "Public Relations and Management"])) : localStorage.setItem("domainArray", JSON.stringify(["Public Relations and Management"]));
+          navigate("/public-relations-and-management")
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
   }
 
   return (

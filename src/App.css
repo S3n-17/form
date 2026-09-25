@@ -14,7 +14,8 @@ form {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 
   /* Semi-transparent Navy allows the watermark logo to show through */
   background: rgba(13, 28, 66, 0.65) !important;
@@ -208,16 +209,20 @@ h3.q {
 .select-wrapper {
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 /* CUSTOM DROPDOWN SELECT */
 .custom-dropdown {
-  width: 100%;
+  width: 70%;
   padding: 14px 20px;
   font-family: var(--font-body), sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #FCF1D0;
+  border-radius: 12px;
+  border-bottom: 2px solid #FCF1D0;
+  border-top: 1px solid rgba(250, 239, 207);
 
   /* Semi-transparent Royal Blue fill */
   background-color: rgba(34, 57, 111, 0.45);

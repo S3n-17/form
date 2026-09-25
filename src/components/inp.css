@@ -114,13 +114,14 @@ input[type="radio"]:checked::after {
 }
 
 #placeholder {
-  width: 100%;
+  width: 70%;
   height: 40px;
-  padding: 6px 4px;
+  padding: 6px 14px;
   background: transparent;
   color: #FCF1D0;
   border: none;
   border-bottom: 2px solid #FCF1D0;
+  border-top: 1px solid rgba(250, 239, 207);
   font-size: 15px;
 }
 
