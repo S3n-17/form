@@ -11,7 +11,7 @@ form {
   width: 100%;
   margin-bottom: 32px;
   padding: 36px 40px;
-
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,5 +342,11 @@ h3.q {
   .section-heading {
     font-size: 26px;
     padding: 10px 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .question-container{
+    width: 80%;
   }
 }

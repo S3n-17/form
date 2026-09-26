@@ -125,6 +125,11 @@ input[type="radio"]:checked::after {
   font-size: 15px;
 }
 
+@media (max-width: 600px){
+  #placeholder{
+    width: 85%;
+  }
+}
 /* =========================================
    ENHANCED HOVER & FOCUS EFFECTS FOR INPUTS
 ========================================= */
