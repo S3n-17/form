@@ -4,7 +4,7 @@ import '.././App.css'
 const InpInputBox = ({ required, text, question, name, value, onChange }) => {
     return (
         <div className="question-container">
-            <h3 className="form">{question}</h3>
+            <h3 style={{fontSize: "20px"}} className="form">{question}</h3>
             <br></br>
             <input 
                 type={text || "text"}

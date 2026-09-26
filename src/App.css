@@ -16,7 +16,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  gap: 2px;
   /* Semi-transparent Navy allows the watermark logo to show through */
   background: rgba(13, 28, 66, 0.65) !important;
   backdrop-filter: blur(12px);
@@ -71,11 +71,11 @@ form {
 .question-container h4,
 h3.q {
   width: 100%;
-  margin: 0 0 24px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
 
   font-family: var(--font-heading) !important;
-  font-size: 22px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
   text-align: center !important;
 
@@ -279,7 +279,7 @@ h3.q {
   line-height: 1.4 !important;
 
   /* 2. Add slight bottom padding so tails/shadows aren't cut */
-  padding-bottom: 6px !important;
+  /* padding-bottom: 6px !important; */
 
   /* 3. Ensure overflow isn't clipping text rendering */
   overflow: visible !important;
@@ -345,7 +345,13 @@ h3.q {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
+  .question-container{
+    width: 80%;
+    
+  }
+}
+@media (min-width:401px) and  (max-width: 800px) {
   .question-container{
     width: 80%;
   }
